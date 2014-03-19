@@ -1,0 +1,10 @@
+{
+  "name"        : "asynctaskqueue.js",
+  "description" : "JavaScript worker queue to execute tasks asynchronously, based on (deferred) promises",
+  "keywords"    : ["worker", "queue", "asynchronous", "server", "client", "browser"],
+  "repo"        : "prantlf/asynctaskqueue.js",
+  "main"        : "asynctaskqueue.js",
+  "scripts"     : ["asynctaskqueue.js"],
+  "version"     : "1.0.0",
+  "license"     : "MIT"
+}
