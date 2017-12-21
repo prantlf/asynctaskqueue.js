@@ -64,7 +64,7 @@ support of (deferred) promises.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(window, _, jQuery, factory)</span> {</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">window, _, jQuery, factory</span>) </span>{</pre></div></div>
             
         </li>
         
@@ -96,7 +96,7 @@ on Underscore.js and jQuery.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define !== <span class="hljs-string">"undefined"</span>) {
-    define(<span class="hljs-string">"asynctaskqueue"</span>, [ <span class="hljs-string">"underscrore"</span>, <span class="hljs-string">"jquery"</span> ], <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(_, $)</span> {</span></pre></div></div>
+    define(<span class="hljs-string">"asynctaskqueue"</span>, [ <span class="hljs-string">"underscrore"</span>, <span class="hljs-string">"jquery"</span> ], <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_, $</span>) </span>{</pre></div></div>
             
         </li>
         
@@ -127,8 +127,8 @@ on Underscore.js and jQuery.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> module !== <span class="hljs-string">"undefined"</span> &amp;&amp;
-             <span class="hljs-keyword">typeof</span> module.exports !== <span class="hljs-string">"undefined"</span>) {
+            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span> !== <span class="hljs-string">"undefined"</span> &amp;&amp;
+             <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span>.exports !== <span class="hljs-string">"undefined"</span>) {
     _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">"underscore"</span>);
     jQuery = <span class="hljs-built_in">require</span>(<span class="hljs-string">"jquery"</span>);</pre></div></div>
             
@@ -145,7 +145,7 @@ on Underscore.js and jQuery.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    module.exports = factory(_, jQuery);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-built_in">module</span>.exports = factory(_, jQuery);</pre></div></div>
             
         </li>
         
@@ -161,7 +161,7 @@ included before ths script.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> window !== <span class="hljs-string">"undefined"</span>) {
+            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> !== <span class="hljs-string">"undefined"</span>) {
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> _ === <span class="hljs-string">"undefined"</span>) {
       <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Underscore.js not detected."</span>)
     }
@@ -183,8 +183,8 @@ the global namespace by calling the noConflict function.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    OldAsyncTaskQueue = window.AsyncTaskQueue;
-    window.AsyncTaskQueue = AsyncTaskQueue = factory(_, jQuery);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    OldAsyncTaskQueue = <span class="hljs-built_in">window</span>.AsyncTaskQueue;
+    <span class="hljs-built_in">window</span>.AsyncTaskQueue = AsyncTaskQueue = factory(_, jQuery);</pre></div></div>
             
         </li>
         
@@ -214,8 +214,8 @@ this script so that it can be stored in a local variable.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    AsyncTaskQueue.noConflict = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
-      window.AsyncTaskQueue = OldAsyncTaskQueue;
+            <div class="content"><div class='highlight'><pre>    AsyncTaskQueue.noConflict = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">window</span>.AsyncTaskQueue = OldAsyncTaskQueue;
       <span class="hljs-keyword">return</span> AsyncTaskQueue;
     }</pre></div></div>
             
@@ -264,7 +264,7 @@ initialization function.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>}(window, _, jQuery, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(_, $)</span> {</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>}(<span class="hljs-built_in">window</span>, _, jQuery, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_, $</span>) </span>{</pre></div></div>
             
         </li>
         
@@ -296,7 +296,7 @@ The <em>options</em> is an optional parameter passed to <code>Queue.enqueue</cod
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Task</span><span class="hljs-params">(worker, options)</span> {</span>
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Task</span>(<span class="hljs-params">worker, options</span>) </span>{
     <span class="hljs-keyword">this</span>.worker = worker;
     <span class="hljs-keyword">this</span>.deferred = $.Deferred();
   }
@@ -319,7 +319,7 @@ the promise returned by the worker.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    promise: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>    promise: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.deferred.promise();
     }
 
@@ -352,7 +352,7 @@ the promise returned by the worker.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Scheduler</span><span class="hljs-params">(options)</span> {</span>}
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Scheduler</span>(<span class="hljs-params">options</span>) </span>{}
 
   _.extend(Scheduler.prototype, {</pre></div></div>
             
@@ -369,7 +369,7 @@ the promise returned by the worker.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    push: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(tasks, task)</span> {</span>
+            <div class="content"><div class='highlight'><pre>    push: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tasks, task</span>) </span>{
       tasks.push(task);
     },</pre></div></div>
             
@@ -387,7 +387,7 @@ Returns <code>undefined</code> if the array is empty.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    pop: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(tasks)</span> {</span>
+            <div class="content"><div class='highlight'><pre>    pop: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tasks</span>) </span>{
       <span class="hljs-keyword">return</span> tasks.shift();
     }
 
@@ -430,7 +430,7 @@ them for execution later (<code>Scheduler</code> by default)</li>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Queue</span><span class="hljs-params">(options)</span> {</span>
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Queue</span>(<span class="hljs-params">options</span>) </span>{
     options || (options = {});
     <span class="hljs-keyword">this</span>.parallelism = options.parallelism || <span class="hljs-literal">Infinity</span>;
     <span class="hljs-keyword">this</span>.asynchronous = options.asynchronous;
@@ -510,7 +510,7 @@ The <em>options</em> is an optional parameter to be passed to the
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    enqueue: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task, options)</span> {</span>
+            <div class="content"><div class='highlight'><pre>    enqueue: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task, options</span>) </span>{
       <span class="hljs-keyword">if</span> (!(task <span class="hljs-keyword">instanceof</span> <span class="hljs-keyword">this</span>.Task)) {
         task = <span class="hljs-keyword">new</span> <span class="hljs-keyword">this</span>.Task(task, options);
       }
@@ -536,7 +536,7 @@ if no matching one was found.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    dequeue: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> {</span>
+            <div class="content"><div class='highlight'><pre>    dequeue: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) </span>{
       <span class="hljs-keyword">var</span> index = <span class="hljs-keyword">this</span>._index(<span class="hljs-keyword">this</span>.pending, task);
       <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.pending.splice(index, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>];
@@ -562,7 +562,7 @@ other queue execution.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    promise: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>    promise: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.deferred.promise();
     },</pre></div></div>
             
@@ -579,7 +579,7 @@ other queue execution.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    empty: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>    empty: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">return</span> !(<span class="hljs-keyword">this</span>.pending.length || <span class="hljs-keyword">this</span>.processing.length);
     },</pre></div></div>
             
@@ -598,7 +598,7 @@ tasks will still continue running.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    pause: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>    pause: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">this</span>.paused = <span class="hljs-literal">true</span>;
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
     },</pre></div></div>
@@ -617,7 +617,7 @@ tasks will still continue running.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    resume: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>    resume: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">this</span>.paused = <span class="hljs-literal">false</span>;</pre></div></div>
             
         </li>
@@ -656,7 +656,7 @@ has been already empty; it wait for another queue run.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    abort: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>    abort: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">this</span>.pending = [];
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.processing.length ? <span class="hljs-keyword">this</span>.promise() :
         $.Deferred.resolve().promise();
@@ -689,7 +689,7 @@ and the maximum degree of parallelism has not been reached yet.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _schedule: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>    _schedule: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">var</span> task;
       <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.paused &amp;&amp;
           <span class="hljs-keyword">this</span>.processing.length &lt; <span class="hljs-keyword">this</span>.parallelism &amp;&amp;
@@ -729,7 +729,7 @@ be configured to allow parallel task execution.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _execute: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> {</span>
+            <div class="content"><div class='highlight'><pre>    _execute: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) </span>{
       <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;</pre></div></div>
             
         </li>
@@ -745,13 +745,13 @@ be configured to allow parallel task execution.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">work</span><span class="hljs-params">()</span> {</span>
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">work</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-keyword">try</span> {
           task.worker()
             .progress(task.deferred.notify)
             .done(task.deferred.done)
             .fail(task.deferred.fail)
-            .always(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+            .always(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
               self._finish(task);
             });</pre></div></div>
             
@@ -828,7 +828,7 @@ extra asynchronous worker execution may not be necessary.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _finish: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> {</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre>    _finish: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) </span>{</pre></div></div>
             
         </li>
         
@@ -899,7 +899,7 @@ functions to identify the task.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _index: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(tasks, task)</span> {</span>
+            <div class="content"><div class='highlight'><pre>    _index: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tasks, task</span>) </span>{
       <span class="hljs-keyword">var</span> i;
       <span class="hljs-keyword">if</span> (task <span class="hljs-keyword">instanceof</span> <span class="hljs-keyword">this</span>.Task) {
         task = task.worker;
