@@ -17,7 +17,8 @@
 (function() {
 	'use strict';
 
-	var args = require('system').args;
+	var args = require('system').args,
+		fs = require('fs');
 
 	// arg[0]: scriptName, args[1...]: arguments
 	if (args.length !== 2) {
@@ -25,7 +26,7 @@
 		phantom.exit(1);
 	}
 
-	var url = args[1],
+	var url = 'file://' + fs.absolute(args[1]),
 		page = require('webpage').create();
 
 	// Route `console.log()` calls from within the Page context to the main Phantom context (i.e. current `this`)
