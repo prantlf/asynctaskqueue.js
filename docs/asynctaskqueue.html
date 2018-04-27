@@ -695,7 +695,7 @@ and the maximum degree of parallelism has not been reached yet.</p>
           <span class="hljs-keyword">this</span>.processing.length &lt; <span class="hljs-keyword">this</span>.parallelism &amp;&amp;
           (task = <span class="hljs-keyword">this</span>.scheduler.pop(<span class="hljs-keyword">this</span>.pending))) {
         <span class="hljs-keyword">this</span>.processing.push(task);
-        <span class="hljs-keyword">this</span>.deferred.notify({ scheduled: <span class="hljs-literal">true</span> });
+        <span class="hljs-keyword">this</span>.deferred.notify({ <span class="hljs-attr">scheduled</span>: <span class="hljs-literal">true</span> });
         <span class="hljs-keyword">this</span>._execute(task);</pre></div></div>
             
         </li>
@@ -909,7 +909,7 @@ functions to identify the task.</p>
           <span class="hljs-keyword">return</span> i;
         }
       }
-      <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
     }
 
   });
