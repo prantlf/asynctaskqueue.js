@@ -2,7 +2,7 @@
 //     https://github.com/prantlf/asynctaskqueue.js
 //     (c) 2014 Ferdinand Prantl <prantlf@gmail.com>
 //     Freely distributable under the MIT license
-!function(e,r,i,n){var t,s;if("undefined"!=typeof define)define("asynctaskqueue",["underscrore","jquery"],function(e,r){return n(e,r)});else if("undefined"!=typeof module&&void 0!==module.exports)r=require("underscore"),i=require("jquery"),module.exports=n(r,i);else{if(void 0===e)throw new Error("JavaScript environment not recognized.");if(void 0===r)throw new Error("Underscore.js not detected.");if(void 0===i)throw new Error("JQuery not detected.");t=e.AsyncTaskQueue,e.AsyncTaskQueue=s=n(r,i),s.noConflict=function(){return e.AsyncTaskQueue=t,s}}}(window,_,jQuery,function(e,i){function r(e,r){this.worker=e,this.deferred=i.Deferred()}function n(e){}
+!function(e,r,i,n){var t,s;if("undefined"!=typeof define)define("asynctaskqueue",["underscore","jquery"],function(e,r){return n(e,r)});else if("undefined"!=typeof module&&void 0!==module.exports)r=require("underscore"),i=require("jquery"),module.exports=n(r,i);else{if(void 0===e)throw new Error("JavaScript environment not recognized.");if(void 0===r)throw new Error("Underscore.js not detected.");if(void 0===i)throw new Error("JQuery not detected.");t=e.AsyncTaskQueue,e.AsyncTaskQueue=s=n(r,i),s.noConflict=function(){return e.AsyncTaskQueue=t,s}}}(window,_,jQuery,function(e,i){function r(e,r){this.worker=e,this.deferred=i.Deferred()}function n(e){}
 // * Task         - object to wrap the workers with (`Task` by default)
 // * Scheduler    - object to push pending workers to the queue and pop
 // * scheduler    - the optional parameter to be passed to the

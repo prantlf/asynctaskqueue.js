@@ -1,6 +1,6 @@
-//     asynctaskqueue.js 1.0.0
+//     asynctaskqueue.js 2.0.1
 //     https://github.com/prantlf/asynctaskqueue.js
-//     (c) 2014 Ferdinand Prantl <prantlf@gmail.com>
+//     (c) 2014-2019 Ferdinand Prantl <prantlf@gmail.com>
 //     Freely distributable under the MIT license
 
 // ## Environment Detection
