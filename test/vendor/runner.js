@@ -71,6 +71,11 @@
 
 	function addLogging() {
 		window.document.addEventListener('DOMContentLoaded', function() {
+            // Ignore other browser windows like "about:blank", which may get opened too.
+            if (typeof QUnit === 'undefined') {
+                return;
+            }
+
 			var current_test_assertions = [];
 
 			QUnit.log(function(details) {
