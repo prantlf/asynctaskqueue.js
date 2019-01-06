@@ -18,7 +18,7 @@
   // Register the Queue object in the AMD environment, depending
   // on Underscore.js and jQuery.
   if (typeof define !== "undefined") {
-    define("asynctaskqueue", [ "underscrore", "jquery" ], function (_, $) {
+    define("asynctaskqueue", [ "underscore", "jquery" ], function (_, $) {
       // Return the Queue object as the module export.
       return factory(_, $);
     });
