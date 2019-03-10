@@ -27,16 +27,12 @@
   "devDependencies": {
     "docco": "0.8.0",
     "phantomjs": "2.1.7",
-    "uglify-js": "3.4.9",
-    "semantic-release": "15.13.2",
-    "travis-deploy-once": "5.0.11"
+    "uglify-js": "3.4.9"
   },
   "scripts": {
     "test": "phantomjs test/vendor/runner.js test/index.html?noglobals=true",
     "build": "uglifyjs asynctaskqueue.js -c \"evaluate=false\" --comments=\"/    .*/\" -m --source-map -o asynctaskqueue-min.js",
-    "doc": "docco asynctaskqueue.js",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "doc": "docco asynctaskqueue.js"
   },
   "licenses": [
     {
