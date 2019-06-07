@@ -22,12 +22,12 @@
   },
   "dependencies": {
     "underscore": "1.9.1",
-    "jquery": "3.3.1"
+    "jquery": "3.4.1"
   },
   "devDependencies": {
     "docco": "0.8.0",
     "phantomjs": "2.1.7",
-    "uglify-js": "3.4.9"
+    "uglify-js": "3.6.0"
   },
   "scripts": {
     "test": "phantomjs test/vendor/runner.js test/index.html?noglobals=true",
