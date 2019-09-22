@@ -1,24 +1,31 @@
 {
   "name": "asynctaskqueue.js",
+  "version": "0.0.0-development",
   "description": "JavaScript worker queue to execute tasks asynchronously, based on (deferred) promises",
   "homepage": "https://github.com/prantlf/asynctaskqueue.js",
-  "keywords": [
-    "worker",
-    "queue",
-    "asynchronous",
-    "server",
-    "client",
-    "browser"
-  ],
   "author": "Ferdinand Prantl <prantlf@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/prantlf/asynctaskqueue.js.git"
   },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/prantlf/asynctaskqueue.js/master/LICENSE"
+    }
+  ],
   "main": "asynctaskqueue.js",
-  "version": "0.0.0-development",
+  "files": [
+    "asynctaskqueue.js",
+    "asynctaskqueue-min.js"
+  ],
   "engines": {
     "node": ">=6"
+  },
+  "scripts": {
+    "test": "phantomjs test/vendor/runner.js test/index.html?noglobals=true",
+    "build": "uglifyjs asynctaskqueue.js -c \"evaluate=false\" --comments=\"/    .*/\" -m --source-map -o asynctaskqueue-min.js",
+    "doc": "docco asynctaskqueue.js"
   },
   "dependencies": {
     "underscore": "1.9.1",
@@ -29,20 +36,12 @@
     "phantomjs": "2.1.7",
     "uglify-js": "3.6.0"
   },
-  "scripts": {
-    "test": "phantomjs test/vendor/runner.js test/index.html?noglobals=true",
-    "build": "uglifyjs asynctaskqueue.js -c \"evaluate=false\" --comments=\"/    .*/\" -m --source-map -o asynctaskqueue-min.js",
-    "doc": "docco asynctaskqueue.js"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/prantlf/asynctaskqueue.js/master/LICENSE"
-    }
-  ],
-  "files": [
-    "asynctaskqueue.js",
-    "asynctaskqueue-min.js",
-    "LICENSE"
+  "keywords": [
+    "worker",
+    "queue",
+    "asynchronous",
+    "server",
+    "client",
+    "browser"
   ]
 }
