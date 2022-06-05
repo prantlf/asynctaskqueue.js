@@ -1,6 +1,6 @@
 {
   "name"     : "asynctaskqueue.js",
-  "version"  : "2.0.1",
+  "version"  : "2.0.3",
   "main"     : "asynctaskqueue.js",
   "keywords" : ["worker", "queue", "asynchronous", "server", "client", "browser"],
   "ignore"   : ["docs", "test", "*.yml", "*.map"]
