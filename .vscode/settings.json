@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "asynctaskqueue-min.js*": true,
+    "pnpm-lock.yaml": true
+  },
+  "search.exclude": {
+    "docs": true,
+    "**/node_modules": true
+  }
+}

@@ -1,2 +1,4 @@
 .DS_Store
+asynctaskqueue-min.js*
+docs
 node_modules
