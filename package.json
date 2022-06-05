@@ -1,6 +1,6 @@
 {
   "name": "asynctaskqueue.js",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "JavaScript worker queue to execute tasks asynchronously, based on (deferred) promises",
   "homepage": "https://github.com/prantlf/asynctaskqueue.js",
   "author": "Ferdinand Prantl <prantlf@gmail.com>",
