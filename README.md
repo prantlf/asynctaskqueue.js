@@ -6,6 +6,8 @@
 
 AsyncTaskQueue.js is a worker (function) queue executing the tasks asynchronously, which uses (deferred) promises to notify about the execution status.
 
+**Warning**: Minified build output and generated documentation has been removed from the source code repository. Instead of to files in this repository, refer to https://unpkg.com/asynctaskqueue.js@3.0.0/asynctaskqueue-min.js and https://prantlf.github.io/asynctaskqueue.js/.
+
 ## Contributing
 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Lint and test your code.

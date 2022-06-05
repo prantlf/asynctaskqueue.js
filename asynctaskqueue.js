@@ -1,7 +1,8 @@
-//     asynctaskqueue.js 2.0.4
-//     https://github.com/prantlf/asynctaskqueue.js
-//     (c) 2014-2012 Ferdinand Prantl <prantlf@gmail.com>
-//     Freely distributable under the MIT license
+// # asynctaskqueue.js 3.0.0
+//
+// Repository: <a href="https://github.com/prantlf/asynctaskqueue.js">https://github.com/prantlf/asynctaskqueue.js</a><br>
+// Copyright (c) 2014-2022 Ferdinand Prantl <prantlf@gmail.com><br>
+// Freely distributable under the MIT license
 
 // ## Environment Detection
 
@@ -323,7 +324,7 @@
 
   });
 
-  Queue.version = "2.0.4";
+  Queue.version = "3.0.0";
 
   return Queue;
 
