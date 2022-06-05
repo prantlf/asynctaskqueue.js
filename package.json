@@ -25,9 +25,13 @@
   },
   "scripts": {
     "test": "teru test/node.js | faucet && node test/launch.mjs test/iife.html | faucet && node test/launch.mjs test/amd.html | faucet",
-    "prepare": "esbuild --minify --sourcemap --outfile=asynctaskqueue-min.js asynctaskqueue.js && docco asynctaskqueue.js",
-    "build": "esbuild --minify --sourcemap --outfile=asynctaskqueue-min.js asynctaskqueue.js",
-    "doc": "docco asynctaskqueue.js"
+    "prepare": "esbuild --minify --sourcemap --outfile=asynctaskqueue-min.js asynctaskqueue.js",
+    "doc": "docco asynctaskqueue.js && mv docs/asynctaskqueue.html docs/index.html",
+    "web": "npm run web:sync && npm run web:deploy",
+    "web:clone": "test ! -d ../asynctaskqueue.js-pages && git clone --single-branch --branch gh-pages `git remote get-url origin` ../asynctaskqueue.js-pages",
+    "web:pull": "cd ../asynctaskqueue.js-pages && git pull",
+    "web:sync": "cp -r docs/* ../asynctaskqueue.js-pages/",
+    "web:deploy": "cd ../asynctaskqueue.js-pages && git add . && git commit -m 'Deploy site updates' && git push origin gh-pages"
   },
   "devDependencies": {
     "@prantlf/dom-lite": "^21.3.0",
