@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/prantlf/asynctaskqueue.js/compare/v2.0.4...v3.0.0) (2022-06-05)
+
+### Features
+
+* Remove minified build output and generated documentation ([a5947dd](https://github.com/prantlf/asynctaskqueue.js/commit/a5947ddc98374da99237d6ecfdf44949a6e958ed))
+
+### BREAKING CHANGES
+
+* Minified build output and generated documentation has been removed from the source code repository. Instead of to files in this repository, refer to https://unpkg.com/asynctaskqueue.js@3.0.0/asynctaskqueue-min.js and https://prantlf.github.io/asynctaskqueue.js/.
+
 ## [2.0.3](https://github.com/prantlf/asynctaskqueue.js/compare/v2.0.2...v2.0.3) (2019-09-22)
 
 ### Bug Fixes
