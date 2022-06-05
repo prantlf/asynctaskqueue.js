@@ -1,23 +1,23 @@
-//     asynctaskqueue.js 2.0.1
+//     asynctaskqueue.js 2.0.4
 //     https://github.com/prantlf/asynctaskqueue.js
-//     (c) 2014-2019 Ferdinand Prantl <prantlf@gmail.com>
+//     (c) 2014-2012 Ferdinand Prantl <prantlf@gmail.com>
 //     Freely distributable under the MIT license
 
 // ## Environment Detection
 
-// Immediate fuction which gathers dependencies, calls the implementation
+// Immediate function which gathers dependencies, calls the implementation
 // factory and exposes the `AsyncTaskQueue` object according to the
 // JavaScript environment.  Underscore.js is required for the ECMAScript5
 // compatibility in older web browsers and JQuery is required for the
 // support of (deferred) promises.
-(function (window, _, jQuery, factory) {
+(function (window, factory) {
 
   // Variables to support non-conflicting loading in the web browser.
   var OldAsyncTaskQueue, AsyncTaskQueue;
 
   // Register the Queue object in the AMD environment, depending
   // on Underscore.js and jQuery.
-  if (typeof define !== "undefined") {
+  if (typeof define !== "undefined" && define.amd) {
     define("asynctaskqueue", [ "underscore", "jquery" ], function (_, $) {
       // Return the Queue object as the module export.
       return factory(_, $);
@@ -26,8 +26,8 @@
   // Detect a CommonJS module and ask for Underscore.js and jQuery.
   } else if (typeof module !== "undefined" &&
              typeof module.exports !== "undefined") {
-    _ = require("underscore");
-    jQuery = require("jquery");
+    const _ = require("underscore");
+    const jQuery = require("jquery");
     // Expose the Queue object as the only module export.
     module.exports = factory(_, jQuery);
 
@@ -65,7 +65,7 @@
 // Passes dependencies from the global environment and the factory function
 // encapsulating the `AsyncTaskQueue` implementation to the immediate
 // initialization function.
-}(window, _, jQuery, function (_, $) {
+}(typeof window !== "undefined" ? window : this, function (_, $) {
 
   // ### Task Wrapper
 
@@ -323,7 +323,7 @@
 
   });
 
-  Queue.version = "1.0.0";
+  Queue.version = "2.0.4";
 
   return Queue;
 
