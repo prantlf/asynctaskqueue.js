@@ -1,7 +1,0 @@
-.DS_Store
-.editorconfig
-.git*
-.npmignore
-.travis.yml
-node_modules/
-test

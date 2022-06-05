@@ -1,0 +1,37 @@
+{
+  // Pro informace o možných atributech použijte technologii IntelliSense.
+  // Umístěním ukazatele myši zobrazíte popisy existujících atributů.
+  // Další informace najdete tady: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "test/node",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceFolder}/test/node.js",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "name": "test/iife",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceFolder}/test/launch.mjs",
+      "args": ["file://${workspaceFolder}/test/iife.html"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "name": "test/amd",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceFolder}/test/launch.mjs",
+      "args": ["file://${workspaceFolder}/test/amd.html"],
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}
