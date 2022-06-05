@@ -1,3 +1,9 @@
+## [3.0.1](https://github.com/prantlf/asynctaskqueue.js/compare/v3.0.0...v3.0.1) (2022-06-05)
+
+### Bug Fixes
+
+* Synchronise the version with the NPM registry ([47c31de](https://github.com/prantlf/asynctaskqueue.js/commit/47c31deb059d2a5878f8253bad35104763799fc3))
+
 # [3.0.0](https://github.com/prantlf/asynctaskqueue.js/compare/v2.0.4...v3.0.0) (2022-06-05)
 
 ### Features

@@ -1,4 +1,4 @@
-// # asynctaskqueue.js 3.0.1
+// # asynctaskqueue.js 3.0.2
 //
 // Repository: <a href="https://github.com/prantlf/asynctaskqueue.js">https://github.com/prantlf/asynctaskqueue.js</a><br>
 // Copyright (c) 2014-2022 Ferdinand Prantl <prantlf@gmail.com><br>
@@ -324,7 +324,7 @@
 
   });
 
-  Queue.version = "3.0.1";
+  Queue.version = "3.0.2";
 
   return Queue;
 
