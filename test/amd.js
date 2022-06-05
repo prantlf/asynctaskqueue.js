@@ -9,7 +9,7 @@ require.config({
   },
   deps: ['tehanu', 'teas', 'asynctaskqueue', 'tape'],
   callback: ({ factory, run }, { strictEqual }, AsyncTaskQueue, reporter) => {
-    const test = factory('AsyncTaskQueue')
+    const test = factory('AsyncTaskQueue AMD')
 
     const { Task } = AsyncTaskQueue.prototype
 

@@ -24,7 +24,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "teru test/node.js | faucet && node test/launch.mjs test/iife.html | faucet && node test/launch.mjs test/amd.html | faucet",
+    "test": "teru test/node.js | faucet && tenbo test/iife.html | faucet && tenbo test/amd.html | faucet && tenbo test/esm.html | faucet",
     "prepare": "esbuild --minify --sourcemap --outfile=asynctaskqueue-min.js asynctaskqueue.js",
     "doc": "docco asynctaskqueue.js && mv docs/asynctaskqueue.html docs/index.html",
     "web": "npm run web:sync && npm run web:deploy",
@@ -61,6 +61,7 @@
     "tehanu": "^1.0.1",
     "tehanu-repo-tape": "^1.0.1",
     "tehanu-teas": "^1.0.0",
+    "tehanu-tenbo": "^0.1.0",
     "tehanu-teru": "^1.0.0",
     "underscore": "^1.13.4"
   },

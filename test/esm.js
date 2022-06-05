@@ -1,4 +1,4 @@
-import test from '../node_modules/tehanu/dist/suite.min.mjs?name=AsyncTaskQueue'
+import test from '../node_modules/tehanu/dist/suite.min.mjs?name=AsyncTaskQueue%20ESM'
 import '../node_modules/tehanu-repo-tape/dist/index.min.mjs'
 import { strictEqual } from '../node_modules/tehanu-teas/dist/index.min.mjs'
 import '../node_modules/underscore/underscore-umd-min.js'

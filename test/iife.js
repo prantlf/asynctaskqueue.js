@@ -1,5 +1,5 @@
 (() => {
-  const test = tehanu('AsyncTaskQueue')
+  const test = tehanu(document.title || 'AsyncTaskQueue')
   const { strictEqual } = tehanuTeas
 
   const { Task } = AsyncTaskQueue.prototype
