@@ -24,13 +24,15 @@
         <li id="section-1">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-1">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-1">&#x00a7;</a>
               </div>
-              <pre><code>asynctaskqueue.js <span class="hljs-number">2.0</span><span class="hljs-number">.1</span>
-https:<span class="hljs-comment">//github.com/prantlf/asynctaskqueue.js</span>
-(c) <span class="hljs-number">2014</span><span class="hljs-number">-2019</span> Ferdinand Prantl &lt;prantlf@gmail.com&gt;
-Freely distributable under the MIT license</code></pre>
+              <pre><code>asynctaskqueue.<span class="hljs-property">js</span> <span class="hljs-number">2.0</span><span class="hljs-number">.4</span>
+<span class="hljs-attr">https</span>:<span class="hljs-comment">//github.com/prantlf/asynctaskqueue.js</span>
+(c) <span class="hljs-number">2014</span>-<span class="hljs-number">2012</span> <span class="hljs-title class_">Ferdinand</span> <span class="hljs-title class_">Prantl</span> &lt;prantlf@gmail.<span class="hljs-property">com</span>&gt;
+<span class="hljs-title class_">Freely</span> distributable under the <span class="hljs-variable constant_">MIT</span> license
+</code></pre>
+
             </div>
             
         </li>
@@ -39,8 +41,8 @@ Freely distributable under the MIT license</code></pre>
         <li id="section-2">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-2">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-2">&#x00a7;</a>
               </div>
               <h2 id="environment-detection">Environment Detection</h2>
 
@@ -52,10 +54,10 @@ Freely distributable under the MIT license</code></pre>
         <li id="section-3">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-3">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-3">&#x00a7;</a>
               </div>
-              <p>Immediate fuction which gathers dependencies, calls the implementation
+              <p>Immediate function which gathers dependencies, calls the implementation
 factory and exposes the <code>AsyncTaskQueue</code> object according to the
 JavaScript environment.  Underscore.js is required for the ECMAScript5
 compatibility in older web browsers and JQuery is required for the
@@ -63,7 +65,7 @@ support of (deferred) promises.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">window, _, jQuery, factory</span>) </span>{</pre></div></div>
+            <div class="content"><div class='highlight'><pre>(<span class="hljs-keyword">function</span> (<span class="hljs-params"><span class="hljs-variable language_">window</span>, factory</span>) {</pre></div></div>
             
         </li>
         
@@ -71,14 +73,14 @@ support of (deferred) promises.</p>
         <li id="section-4">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-4">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-4">&#x00a7;</a>
               </div>
               <p>Variables to support non-conflicting loading in the web browser.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> OldAsyncTaskQueue, AsyncTaskQueue;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> <span class="hljs-title class_">OldAsyncTaskQueue</span>, <span class="hljs-title class_">AsyncTaskQueue</span>;</pre></div></div>
             
         </li>
         
@@ -86,16 +88,16 @@ support of (deferred) promises.</p>
         <li id="section-5">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-5">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-5">&#x00a7;</a>
               </div>
               <p>Register the Queue object in the AMD environment, depending
 on Underscore.js and jQuery.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define !== <span class="hljs-string">"undefined"</span>) {
-    define(<span class="hljs-string">"asynctaskqueue"</span>, [ <span class="hljs-string">"underscore"</span>, <span class="hljs-string">"jquery"</span> ], <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_, $</span>) </span>{</pre></div></div>
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define !== <span class="hljs-string">&quot;undefined&quot;</span> &amp;&amp; define.<span class="hljs-property">amd</span>) {
+    <span class="hljs-title function_">define</span>(<span class="hljs-string">&quot;asynctaskqueue&quot;</span>, [ <span class="hljs-string">&quot;underscore&quot;</span>, <span class="hljs-string">&quot;jquery&quot;</span> ], <span class="hljs-keyword">function</span> (<span class="hljs-params">_, $</span>) {</pre></div></div>
             
         </li>
         
@@ -103,14 +105,14 @@ on Underscore.js and jQuery.</p>
         <li id="section-6">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-6">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-6">&#x00a7;</a>
               </div>
               <p>Return the Queue object as the module export.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">return</span> factory(_, $);
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">return</span> <span class="hljs-title function_">factory</span>(_, $);
     });</pre></div></div>
             
         </li>
@@ -119,17 +121,17 @@ on Underscore.js and jQuery.</p>
         <li id="section-7">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-7">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-7">&#x00a7;</a>
               </div>
               <p>Detect a CommonJS module and ask for Underscore.js and jQuery.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span> !== <span class="hljs-string">"undefined"</span> &amp;&amp;
-             <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span>.exports !== <span class="hljs-string">"undefined"</span>) {
-    _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">"underscore"</span>);
-    jQuery = <span class="hljs-built_in">require</span>(<span class="hljs-string">"jquery"</span>);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-variable language_">module</span> !== <span class="hljs-string">&quot;undefined&quot;</span> &amp;&amp;
+             <span class="hljs-keyword">typeof</span> <span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> !== <span class="hljs-string">&quot;undefined&quot;</span>) {
+    <span class="hljs-keyword">const</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;underscore&quot;</span>);
+    <span class="hljs-keyword">const</span> jQuery = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;jquery&quot;</span>);</pre></div></div>
             
         </li>
         
@@ -137,14 +139,14 @@ on Underscore.js and jQuery.</p>
         <li id="section-8">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-8">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-8">&#x00a7;</a>
               </div>
               <p>Expose the Queue object as the only module export.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-built_in">module</span>.exports = factory(_, jQuery);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = <span class="hljs-title function_">factory</span>(_, jQuery);</pre></div></div>
             
         </li>
         
@@ -152,20 +154,20 @@ on Underscore.js and jQuery.</p>
         <li id="section-9">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-9">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-9">&#x00a7;</a>
               </div>
               <p>Detect the web browser and check that Underscore.js and jQuery were
 included before ths script.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> !== <span class="hljs-string">"undefined"</span>) {
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> _ === <span class="hljs-string">"undefined"</span>) {
-      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"Underscore.js not detected."</span>)
+            <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-variable language_">window</span> !== <span class="hljs-string">&quot;undefined&quot;</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> _ === <span class="hljs-string">&quot;undefined&quot;</span>) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&quot;Underscore.js not detected.&quot;</span>)
     }
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> jQuery === <span class="hljs-string">"undefined"</span>) {
-      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"JQuery not detected."</span>)
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> jQuery === <span class="hljs-string">&quot;undefined&quot;</span>) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&quot;JQuery not detected.&quot;</span>)
     }</pre></div></div>
             
         </li>
@@ -174,16 +176,16 @@ included before ths script.</p>
         <li id="section-10">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-10">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-10">&#x00a7;</a>
               </div>
               <p>Expose the Queue object globally and give the user a chance to restore
 the global namespace by calling the noConflict function.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    OldAsyncTaskQueue = <span class="hljs-built_in">window</span>.AsyncTaskQueue;
-    <span class="hljs-built_in">window</span>.AsyncTaskQueue = AsyncTaskQueue = factory(_, jQuery);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-title class_">OldAsyncTaskQueue</span> = <span class="hljs-variable language_">window</span>.<span class="hljs-property">AsyncTaskQueue</span>;
+    <span class="hljs-variable language_">window</span>.<span class="hljs-property">AsyncTaskQueue</span> = <span class="hljs-title class_">AsyncTaskQueue</span> = <span class="hljs-title function_">factory</span>(_, jQuery);</pre></div></div>
             
         </li>
         
@@ -191,8 +193,8 @@ the global namespace by calling the noConflict function.</p>
         <li id="section-11">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-11">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-11">&#x00a7;</a>
               </div>
               <h3 id="non-conflicting-integration">Non-conflicting Integration</h3>
 
@@ -204,8 +206,8 @@ the global namespace by calling the noConflict function.</p>
         <li id="section-12">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-12">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-12">&#x00a7;</a>
               </div>
               <p>Restores the global value of <code>AsyncTaskQueue</code> which existed before
 this script was loaded and returns the <code>AsyncTaskQueue</code> exported by
@@ -213,9 +215,9 @@ this script so that it can be stored in a local variable.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    AsyncTaskQueue.noConflict = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-built_in">window</span>.AsyncTaskQueue = OldAsyncTaskQueue;
-      <span class="hljs-keyword">return</span> AsyncTaskQueue;
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-title class_">AsyncTaskQueue</span>.<span class="hljs-property">noConflict</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+      <span class="hljs-variable language_">window</span>.<span class="hljs-property">AsyncTaskQueue</span> = <span class="hljs-title class_">OldAsyncTaskQueue</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-title class_">AsyncTaskQueue</span>;
     }</pre></div></div>
             
         </li>
@@ -224,15 +226,15 @@ this script so that it can be stored in a local variable.</p>
         <li id="section-13">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-13">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-13">&#x00a7;</a>
               </div>
               <p>No way to expose the public objects without knowing where we are.</p>
 
             </div>
             
             <div class="content"><div class='highlight'><pre>  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"JavaScript environment not recognized."</span>)
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&quot;JavaScript environment not recognized.&quot;</span>)
   }</pre></div></div>
             
         </li>
@@ -241,8 +243,8 @@ this script so that it can be stored in a local variable.</p>
         <li id="section-14">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-14">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-14">&#x00a7;</a>
               </div>
               <h2 id="module-implementation">Module Implementation</h2>
 
@@ -254,8 +256,8 @@ this script so that it can be stored in a local variable.</p>
         <li id="section-15">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-15">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-15">&#x00a7;</a>
               </div>
               <p>Passes dependencies from the global environment and the factory function
 encapsulating the <code>AsyncTaskQueue</code> implementation to the immediate
@@ -263,7 +265,7 @@ initialization function.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>}(<span class="hljs-built_in">window</span>, _, jQuery, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_, $</span>) </span>{</pre></div></div>
+            <div class="content"><div class='highlight'><pre>}(<span class="hljs-keyword">typeof</span> <span class="hljs-variable language_">window</span> !== <span class="hljs-string">&quot;undefined&quot;</span> ? <span class="hljs-variable language_">window</span> : <span class="hljs-variable language_">this</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">_, $</span>) {</pre></div></div>
             
         </li>
         
@@ -271,8 +273,8 @@ initialization function.</p>
         <li id="section-16">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-16">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-16">&#x00a7;</a>
               </div>
               <h3 id="task-wrapper">Task Wrapper</h3>
 
@@ -284,8 +286,8 @@ initialization function.</p>
         <li id="section-17">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-17">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-17">&#x00a7;</a>
               </div>
               <p>Represents a pending task in the queue.</p>
 <p>The <em>worker</em> is a (function) callback to execute, which must return
@@ -295,12 +297,12 @@ The <em>options</em> is an optional parameter passed to <code>Queue.enqueue</cod
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Task</span>(<span class="hljs-params">worker, options</span>) </span>{
-    <span class="hljs-keyword">this</span>.worker = worker;
-    <span class="hljs-keyword">this</span>.deferred = $.Deferred();
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">Task</span>(<span class="hljs-params">worker, options</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">worker</span> = worker;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">deferred</span> = $.<span class="hljs-title class_">Deferred</span>();
   }
 
-  _.extend(Task.prototype, {</pre></div></div>
+  _.<span class="hljs-title function_">extend</span>(<span class="hljs-title class_">Task</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>, {</pre></div></div>
             
         </li>
         
@@ -308,8 +310,8 @@ The <em>options</em> is an optional parameter passed to <code>Queue.enqueue</cod
         <li id="section-18">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-18">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-18">&#x00a7;</a>
               </div>
               <p>Returns a promise for the result of the task worker.
 When the task is scheduled for execution, the promise <code>progress</code> is
@@ -318,8 +320,8 @@ the promise returned by the worker.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    promise: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.deferred.promise();
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">promise</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">deferred</span>.<span class="hljs-title function_">promise</span>();
     }
 
   });</pre></div></div>
@@ -330,8 +332,8 @@ the promise returned by the worker.</p>
         <li id="section-19">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-19">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-19">&#x00a7;</a>
               </div>
               <h3 id="task-scheduler">Task Scheduler</h3>
 
@@ -343,17 +345,17 @@ the promise returned by the worker.</p>
         <li id="section-20">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-20">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-20">&#x00a7;</a>
               </div>
               <p>Provides a FIFO queue scheduler pushing and popping pending tasks.</p>
 <p>The <em>options</em> is an optional parameter passed to <code>Queue.constructor</code>.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Scheduler</span>(<span class="hljs-params">options</span>) </span>{}
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">Scheduler</span>(<span class="hljs-params">options</span>) {}
 
-  _.extend(Scheduler.prototype, {</pre></div></div>
+  _.<span class="hljs-title function_">extend</span>(<span class="hljs-title class_">Scheduler</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>, {</pre></div></div>
             
         </li>
         
@@ -361,15 +363,15 @@ the promise returned by the worker.</p>
         <li id="section-21">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-21">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-21">&#x00a7;</a>
               </div>
               <p>Pushes the task to the end of the array to be picked as the last one.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    push: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tasks, task</span>) </span>{
-      tasks.push(task);
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">push</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">tasks, task</span>) {
+      tasks.<span class="hljs-title function_">push</span>(task);
     },</pre></div></div>
             
         </li>
@@ -378,16 +380,16 @@ the promise returned by the worker.</p>
         <li id="section-22">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-22">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-22">&#x00a7;</a>
               </div>
               <p>Pops the (oldest) task from the beginning of the array and returns it.
 Returns <code>undefined</code> if the array is empty.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    pop: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tasks</span>) </span>{
-      <span class="hljs-keyword">return</span> tasks.shift();
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">pop</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">tasks</span>) {
+      <span class="hljs-keyword">return</span> tasks.<span class="hljs-title function_">shift</span>();
     }
 
   });</pre></div></div>
@@ -398,8 +400,8 @@ Returns <code>undefined</code> if the array is empty.</p>
         <li id="section-23">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-23">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-23">&#x00a7;</a>
               </div>
               <h3 id="task-queue">Task Queue</h3>
 
@@ -411,8 +413,8 @@ Returns <code>undefined</code> if the array is empty.</p>
         <li id="section-24">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-24">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-24">&#x00a7;</a>
               </div>
               <p>Provides a queue executing tasks.</p>
 <p>The <em>options</em> is an object with the following properties:</p>
@@ -429,23 +431,23 @@ them for execution later (<code>Scheduler</code> by default)</li>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Queue</span>(<span class="hljs-params">options</span>) </span>{
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">Queue</span>(<span class="hljs-params">options</span>) {
     options || (options = {});
-    <span class="hljs-keyword">this</span>.parallelism = options.parallelism || <span class="hljs-literal">Infinity</span>;
-    <span class="hljs-keyword">this</span>.asynchronous = options.asynchronous;
-    <span class="hljs-keyword">if</span> (options.Task) {
-      <span class="hljs-keyword">this</span>.Task = options.Task;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">parallelism</span> = options.<span class="hljs-property">parallelism</span> || <span class="hljs-title class_">Infinity</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">asynchronous</span> = options.<span class="hljs-property">asynchronous</span>;
+    <span class="hljs-keyword">if</span> (options.<span class="hljs-property">Task</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">Task</span> = options.<span class="hljs-property">Task</span>;
     }
-    <span class="hljs-keyword">if</span> (options.Scheduler) {
-      <span class="hljs-keyword">this</span>.Scheduler = options.Scheduler;
+    <span class="hljs-keyword">if</span> (options.<span class="hljs-property">Scheduler</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">Scheduler</span> = options.<span class="hljs-property">Scheduler</span>;
     }
-    <span class="hljs-keyword">this</span>.pending = [];
-    <span class="hljs-keyword">this</span>.processing = [];
-    <span class="hljs-keyword">this</span>.deferred = $.Deferred();
-    <span class="hljs-keyword">this</span>.scheduler = <span class="hljs-keyword">new</span> Scheduler(<span class="hljs-keyword">this</span>, options.scheduler);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pending</span> = [];
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">processing</span> = [];
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">deferred</span> = $.<span class="hljs-title class_">Deferred</span>();
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">scheduler</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scheduler</span>(<span class="hljs-variable language_">this</span>, options.<span class="hljs-property">scheduler</span>);
   }
 
-  _.extend(Queue.prototype, {</pre></div></div>
+  _.<span class="hljs-title function_">extend</span>(<span class="hljs-title class_">Queue</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>, {</pre></div></div>
             
         </li>
         
@@ -453,14 +455,14 @@ them for execution later (<code>Scheduler</code> by default)</li>
         <li id="section-25">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-25">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-25">&#x00a7;</a>
               </div>
               <p>Wraps the worker functions passed to <code>enqueue</code> to be manageable.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    Task: Task,</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-title class_">Task</span>: <span class="hljs-title class_">Task</span>,</pre></div></div>
             
         </li>
         
@@ -468,15 +470,15 @@ them for execution later (<code>Scheduler</code> by default)</li>
         <li id="section-26">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-26">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-26">&#x00a7;</a>
               </div>
               <p>Decides how the tasks are pushed to the pending array and in which
 order they are popped for execution.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    Scheduler: Scheduler,</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-title class_">Scheduler</span>: <span class="hljs-title class_">Scheduler</span>,</pre></div></div>
             
         </li>
         
@@ -484,8 +486,8 @@ order they are popped for execution.</p>
         <li id="section-27">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-27">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-27">&#x00a7;</a>
               </div>
               <h4 id="public-methods">Public Methods</h4>
 
@@ -497,8 +499,8 @@ order they are popped for execution.</p>
         <li id="section-28">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-28">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-28">&#x00a7;</a>
               </div>
               <p>Adds a task to the queue.</p>
 <p>The <em>task</em> is a <code>Task</code> object or a (function) callback returning a
@@ -509,12 +511,12 @@ The <em>options</em> is an optional parameter to be passed to the
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    enqueue: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task, options</span>) </span>{
-      <span class="hljs-keyword">if</span> (!(task <span class="hljs-keyword">instanceof</span> <span class="hljs-keyword">this</span>.Task)) {
-        task = <span class="hljs-keyword">new</span> <span class="hljs-keyword">this</span>.Task(task, options);
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">enqueue</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">task, options</span>) {
+      <span class="hljs-keyword">if</span> (!(task <span class="hljs-keyword">instanceof</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">Task</span>)) {
+        task = <span class="hljs-keyword">new</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title class_">Task</span>(task, options);
       }
-      <span class="hljs-keyword">this</span>.scheduler.push(<span class="hljs-keyword">this</span>.pending, task);
-      <span class="hljs-keyword">this</span>._schedule();
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">scheduler</span>.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">pending</span>, task);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_schedule</span>();
       <span class="hljs-keyword">return</span> task;
     },</pre></div></div>
             
@@ -524,8 +526,8 @@ The <em>options</em> is an optional parameter to be passed to the
         <li id="section-29">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-29">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-29">&#x00a7;</a>
               </div>
               <p>Removes a task from the queue if it is still pending.</p>
 <p>The <em>task</em> is a <code>Task</code> object or a (function) callback added to the
@@ -535,10 +537,10 @@ if no matching one was found.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    dequeue: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) </span>{
-      <span class="hljs-keyword">var</span> index = <span class="hljs-keyword">this</span>._index(<span class="hljs-keyword">this</span>.pending, task);
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">dequeue</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) {
+      <span class="hljs-keyword">var</span> index = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_index</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">pending</span>, task);
       <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.pending.splice(index, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">pending</span>.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>];
       }
     },</pre></div></div>
             
@@ -548,8 +550,8 @@ if no matching one was found.</p>
         <li id="section-30">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-30">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-30">&#x00a7;</a>
               </div>
               <p>Returns a promise for watching the queue state.  A progress
 notification is triggered when a task is scheduled for execution.
@@ -561,8 +563,8 @@ other queue execution.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    promise: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.deferred.promise();
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">promise</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">deferred</span>.<span class="hljs-title function_">promise</span>();
     },</pre></div></div>
             
         </li>
@@ -571,15 +573,15 @@ other queue execution.</p>
         <li id="section-31">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-31">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-31">&#x00a7;</a>
               </div>
               <p>Returns if the queue has no tasks in pending and processing queues.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    empty: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">return</span> !(<span class="hljs-keyword">this</span>.pending.length || <span class="hljs-keyword">this</span>.processing.length);
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">empty</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+      <span class="hljs-keyword">return</span> !(<span class="hljs-variable language_">this</span>.<span class="hljs-property">pending</span>.<span class="hljs-property">length</span> || <span class="hljs-variable language_">this</span>.<span class="hljs-property">processing</span>.<span class="hljs-property">length</span>);
     },</pre></div></div>
             
         </li>
@@ -588,8 +590,8 @@ other queue execution.</p>
         <li id="section-32">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-32">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-32">&#x00a7;</a>
               </div>
               <p>Pauses scheduling of pending tasks for execution; currently executing
 tasks will still continue running.</p>
@@ -597,9 +599,9 @@ tasks will still continue running.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    pause: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">this</span>.paused = <span class="hljs-literal">true</span>;
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">pause</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">paused</span> = <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;
     },</pre></div></div>
             
         </li>
@@ -608,16 +610,16 @@ tasks will still continue running.</p>
         <li id="section-33">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-33">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-33">&#x00a7;</a>
               </div>
               <p>Resumes scheduling of pending tasks for execution.</p>
 <p>Returns this instance for call chaining.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    resume: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">this</span>.paused = <span class="hljs-literal">false</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">resume</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">paused</span> = <span class="hljs-literal">false</span>;</pre></div></div>
             
         </li>
         
@@ -625,16 +627,16 @@ tasks will still continue running.</p>
         <li id="section-34">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-34">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-34">&#x00a7;</a>
               </div>
               <p>When a task execution finishes, another one is scheduled.  But the
 pause could be so long that all tasks have been long finished.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">this</span>._schedule();
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_schedule</span>();
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;
     },</pre></div></div>
             
         </li>
@@ -643,8 +645,8 @@ pause could be so long that all tasks have been long finished.</p>
         <li id="section-35">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-35">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-35">&#x00a7;</a>
               </div>
               <p>Clears the pending tasks in the queue; already executing tasks will
 continue running.</p>
@@ -655,10 +657,10 @@ has been already empty; it wait for another queue run.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    abort: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">this</span>.pending = [];
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.processing.length ? <span class="hljs-keyword">this</span>.promise() :
-        $.Deferred.resolve().promise();
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">abort</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">pending</span> = [];
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">processing</span>.<span class="hljs-property">length</span> ? <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">promise</span>() :
+        $.<span class="hljs-title class_">Deferred</span>.<span class="hljs-title function_">resolve</span>().<span class="hljs-title function_">promise</span>();
     },</pre></div></div>
             
         </li>
@@ -667,8 +669,8 @@ has been already empty; it wait for another queue run.</p>
         <li id="section-36">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-36">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-36">&#x00a7;</a>
               </div>
               <h4 id="private-methods">Private Methods</h4>
 
@@ -680,22 +682,22 @@ has been already empty; it wait for another queue run.</p>
         <li id="section-37">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-37">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-37">&#x00a7;</a>
               </div>
               <p>Schedules another task for executing if the queue is not paused
 and the maximum degree of parallelism has not been reached yet.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _schedule: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">_schedule</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
       <span class="hljs-keyword">var</span> task;
-      <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.paused &amp;&amp;
-          <span class="hljs-keyword">this</span>.processing.length &lt; <span class="hljs-keyword">this</span>.parallelism &amp;&amp;
-          (task = <span class="hljs-keyword">this</span>.scheduler.pop(<span class="hljs-keyword">this</span>.pending))) {
-        <span class="hljs-keyword">this</span>.processing.push(task);
-        <span class="hljs-keyword">this</span>.deferred.notify({ <span class="hljs-attr">scheduled</span>: <span class="hljs-literal">true</span> });
-        <span class="hljs-keyword">this</span>._execute(task);</pre></div></div>
+      <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">paused</span> &amp;&amp;
+          <span class="hljs-variable language_">this</span>.<span class="hljs-property">processing</span>.<span class="hljs-property">length</span> &lt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">parallelism</span> &amp;&amp;
+          (task = <span class="hljs-variable language_">this</span>.<span class="hljs-property">scheduler</span>.<span class="hljs-title function_">pop</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">pending</span>))) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">processing</span>.<span class="hljs-title function_">push</span>(task);
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">deferred</span>.<span class="hljs-title function_">notify</span>({ <span class="hljs-attr">scheduled</span>: <span class="hljs-literal">true</span> });
+        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_execute</span>(task);</pre></div></div>
             
         </li>
         
@@ -703,15 +705,15 @@ and the maximum degree of parallelism has not been reached yet.</p>
         <li id="section-38">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-38">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-38">&#x00a7;</a>
               </div>
               <p>Do not wait until the task execution has finished; the queue may
 be configured to allow parallel task execution.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">this</span>._schedule();
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_schedule</span>();
       }
     },</pre></div></div>
             
@@ -721,15 +723,15 @@ be configured to allow parallel task execution.</p>
         <li id="section-39">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-39">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-39">&#x00a7;</a>
               </div>
               <p>Calls the worker function of the task and relays its promise.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _execute: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) </span>{
-      <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">_execute</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) {
+      <span class="hljs-keyword">var</span> self = <span class="hljs-variable language_">this</span>;</pre></div></div>
             
         </li>
         
@@ -737,21 +739,21 @@ be configured to allow parallel task execution.</p>
         <li id="section-40">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-40">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-40">&#x00a7;</a>
               </div>
               <p>Extracted to a local function to be callable by various ways.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">work</span>(<span class="hljs-params"></span>) </span>{
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">function</span> <span class="hljs-title function_">work</span>(<span class="hljs-params"></span>) {
         <span class="hljs-keyword">try</span> {
-          task.worker()
-            .progress(task.deferred.notify)
-            .done(task.deferred.done)
-            .fail(task.deferred.fail)
-            .always(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-              self._finish(task);
+          task.<span class="hljs-title function_">worker</span>()
+            .<span class="hljs-title function_">progress</span>(task.<span class="hljs-property">deferred</span>.<span class="hljs-property">notify</span>)
+            .<span class="hljs-title function_">done</span>(task.<span class="hljs-property">deferred</span>.<span class="hljs-property">done</span>)
+            .<span class="hljs-title function_">fail</span>(task.<span class="hljs-property">deferred</span>.<span class="hljs-property">fail</span>)
+            .<span class="hljs-title function_">always</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {
+              self.<span class="hljs-title function_">_finish</span>(task);
             });</pre></div></div>
             
         </li>
@@ -760,8 +762,8 @@ be configured to allow parallel task execution.</p>
         <li id="section-41">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-41">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-41">&#x00a7;</a>
               </div>
               <p>Tasks should singnal error through their promise, but if they meet
 a fatal failure, the queue execution should not freeze.</p>
@@ -769,11 +771,11 @@ a fatal failure, the queue execution should not freeze.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>        } <span class="hljs-keyword">catch</span> (error) {
-          task.deferred.reject(error);
-          self._finish(task);
+          task.<span class="hljs-property">deferred</span>.<span class="hljs-title function_">reject</span>(error);
+          self.<span class="hljs-title function_">_finish</span>(task);
         }
       }
-      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.asynchronous) {</pre></div></div>
+      <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">asynchronous</span>) {</pre></div></div>
             
         </li>
         
@@ -781,18 +783,18 @@ a fatal failure, the queue execution should not freeze.</p>
         <li id="section-42">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-42">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-42">&#x00a7;</a>
               </div>
               <p><code>setTimeout(..., 0)</code> makes the callback wait 4 ms before it can be
 executed but <code>setImmediate</code> is not available in most web browsers.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> setImmediate !== <span class="hljs-string">"undefined"</span>) {
-          setImmediate(work);
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> setImmediate !== <span class="hljs-string">&quot;undefined&quot;</span>) {
+          <span class="hljs-title function_">setImmediate</span>(work);
         } <span class="hljs-keyword">else</span> {
-          setTimeout(work, <span class="hljs-number">0</span>);
+          <span class="hljs-built_in">setTimeout</span>(work, <span class="hljs-number">0</span>);
         }
       } <span class="hljs-keyword">else</span> {</pre></div></div>
             
@@ -802,15 +804,15 @@ executed but <code>setImmediate</code> is not available in most web browsers.</p
         <li id="section-43">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-43">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-43">&#x00a7;</a>
               </div>
               <p>If the workers do asynchronous operations like HTTP requests, the
 extra asynchronous worker execution may not be necessary.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>        work();
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-title function_">work</span>();
       }
     },</pre></div></div>
             
@@ -820,14 +822,14 @@ extra asynchronous worker execution may not be necessary.</p>
         <li id="section-44">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-44">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-44">&#x00a7;</a>
               </div>
               <p>Called when a task finished its execution to update the queue state.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _finish: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) </span>{</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">_finish</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">task</span>) {</pre></div></div>
             
         </li>
         
@@ -835,15 +837,15 @@ extra asynchronous worker execution may not be necessary.</p>
         <li id="section-45">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-45">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-45">&#x00a7;</a>
               </div>
               <p>Remove the task from the processing array; it will leave the queue.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">var</span> index = <span class="hljs-keyword">this</span>._index(<span class="hljs-keyword">this</span>.processing, task);
-      <span class="hljs-keyword">this</span>.processing.splice(index, <span class="hljs-number">1</span>);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">var</span> index = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_index</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">processing</span>, task);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">processing</span>.<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">1</span>);</pre></div></div>
             
         </li>
         
@@ -851,8 +853,8 @@ extra asynchronous worker execution may not be necessary.</p>
         <li id="section-46">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-46">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-46">&#x00a7;</a>
               </div>
               <p>When new tasks are added after the queue was emptied, it is
 considered a new queue execution; the once notified watchers should
@@ -860,9 +862,9 @@ not be informed again. Once signalled promise cannot be reset either.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.empty()) {
-        <span class="hljs-keyword">this</span>.deferred.resolve();
-        <span class="hljs-keyword">this</span>.deferred = $.Deferred();
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">empty</span>()) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">deferred</span>.<span class="hljs-title function_">resolve</span>();
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">deferred</span> = $.<span class="hljs-title class_">Deferred</span>();
       } <span class="hljs-keyword">else</span> {</pre></div></div>
             
         </li>
@@ -871,15 +873,15 @@ not be informed again. Once signalled promise cannot be reset either.</p>
         <li id="section-47">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-47">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-47">&#x00a7;</a>
               </div>
               <p>If more tasks than the allowed degree of parallelism have been
 added to the queue, schedule anoher one now.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">this</span>._schedule();
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_schedule</span>();
       }
     },</pre></div></div>
             
@@ -889,8 +891,8 @@ added to the queue, schedule anoher one now.</p>
         <li id="section-48">
             <div class="annotation">
               
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-48">&#182;</a>
+              <div class="sswrap ">
+                <a class="ss" href="#section-48">&#x00a7;</a>
               </div>
               <p>Returns the index of the task in the specified array or -1 if no
 matching one was found.  It accepts both <code>Task</code> objects and worker
@@ -898,24 +900,24 @@ functions to identify the task.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    _index: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tasks, task</span>) </span>{
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-attr">_index</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">tasks, task</span>) {
       <span class="hljs-keyword">var</span> i;
-      <span class="hljs-keyword">if</span> (task <span class="hljs-keyword">instanceof</span> <span class="hljs-keyword">this</span>.Task) {
-        task = task.worker;
+      <span class="hljs-keyword">if</span> (task <span class="hljs-keyword">instanceof</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">Task</span>) {
+        task = task.<span class="hljs-property">worker</span>;
       }
-      <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; tasks.length; ++i) {
-        <span class="hljs-keyword">if</span> (tasks[i].worker === task) {
+      <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; tasks.<span class="hljs-property">length</span>; ++i) {
+        <span class="hljs-keyword">if</span> (tasks[i].<span class="hljs-property">worker</span> === task) {
           <span class="hljs-keyword">return</span> i;
         }
       }
-      <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+      <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
     }
 
   });
 
-  Queue.version = <span class="hljs-string">"1.0.0"</span>;
+  <span class="hljs-title class_">Queue</span>.<span class="hljs-property">version</span> = <span class="hljs-string">&quot;2.0.4&quot;</span>;
 
-  <span class="hljs-keyword">return</span> Queue;
+  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Queue</span>;
 
 }));</pre></div></div>
             
